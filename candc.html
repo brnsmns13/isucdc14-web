@@ -1,0 +1,44 @@
+<html ng-app="someLegalSite">
+    <head>
+        <title>Cache, Daemon, and Commit</title>
+        <link rel='stylesheet' type='text/css' href='css/primary.css'>
+        <link href='css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+        <link href='css/bootstrap-responsive.min.css' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <header class="">
+                    <h1 style='float:left'>Cache, Daemon, and Commit<small> Attourneys at Law</small></h1>
+                    <img src='img/justice.png' style='width:100px;float:right;'/>
+                </header>
+            </div>
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <ul class="nav">
+                        <li class='nav-button'><a href="/">Home</a></li>
+                        <li class='nav-button active'><a href="">Clients and Cases</a></li>
+                        <li class='nav-button'><a href="/casefiles/files.html">Casefiles</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div ng-controller="caseList">
+                <ul>
+                    <div class="span6 offset3 well"ng-repeat="case in cases">
+                        <img src="img/{{case.pic}}" style="width:100px; float:right" />
+                        <h2>{{case.client}}</h2>
+                        <p>{{case.description}}</p>
+                        <h1>{{case.outcome}}</h1>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <script src='js/angular.min.js'></script>
+        <script src='js/jquery.min.js' type='text/javascript'></script>
+        <script src='js/bootstrap.min.js' type='text/javascript'></script>
+        <script src='js/cases.js' type='text/javascript'></script>
+        <script src='js/app.js'></script>
+    </body>
+</html>

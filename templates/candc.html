@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+{% for l in lawyers %}
+<div class="span6 offset3 well ng-scope"> 
+    <img src="static/img/{{ l.image }}.jpg" style="width:100px; float:right">
+    <h2>{{ l.fname }} {{ l.lname }}</h2>
+    <p>{{ l.bio }}</p>
+</div>
+{% endfor %}
+{% endblock %}

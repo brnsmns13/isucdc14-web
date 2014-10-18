@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <ul>
+        {% for case in cases %}
+        <div class="span6 offset3 well"ng-repeat="case in cases">
+            <img src="static/img/{{case.pic}}" style="width:100px; float:right" />
+            <h2>{{case.client}}</h2>
+            <p>{{case.description}}</p>
+            <h1>{{case.outcome}}</h1>
+        </div>
+        {% endfor %}
+    </ul>
+{% endblock %}
